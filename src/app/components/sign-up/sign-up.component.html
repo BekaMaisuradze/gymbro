@@ -1,0 +1,33 @@
+<div class="auth-container">
+    <div class="title">
+        Sign up to your account
+    </div>
+
+    <div class="form">
+        <div class="flex flex-column gap-2 input">
+            <label htmlFor="email">Email address</label>
+            <input pInputText type="email" id="email" aria-describedby="email-help" #email />
+        </div>
+        <div class="flex flex-column gap-2 input">
+            <label htmlFor="password">Password</label>
+            <input pInputText type="password" id="password" aria-describedby="password-help" #pass />
+        </div>
+        <!-- <div class="flex flex-column gap-2 input">
+            <label htmlFor="code">Invitation code</label>
+            <input pInputText type="text" id="code" aria-describedby="code-help" />
+        </div> -->
+
+        <p class="x-small">
+            <p-checkbox [binary]="true" inputId="binary"></p-checkbox>
+            <span class="ml-2">By signin up, you agree to </span><a>terms & conditions</a><span> and </span><a>privacy policy</a>
+        </p>
+
+        <p-button label="Sign Up" (click)="signUp(email.value, pass.value)"></p-button>
+        
+        <p>
+            <span style="color: #333333;">Already have an account? </span>
+            <a routerLink="/login">Log In</a>
+        </p>
+    </div>
+</div>
+

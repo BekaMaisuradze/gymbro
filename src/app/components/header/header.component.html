@@ -1,0 +1,21 @@
+<div class="header-container">
+    <div class="section left">
+        <a class="logo" routerLink="/">
+            <span>GYMPRO</span>
+        </a>
+    </div>
+    <div class="section right">
+        <a *ngIf="!auth.userLoggedIn" routerLink="/login">
+            Log in
+        </a>
+        <a *ngIf="!auth.userLoggedIn" class="sign-up" routerLink="/sign-up">
+            Sign up
+        </a>
+
+        <a *ngIf="auth.userLoggedIn && location.path()!='/assistant'" href="/assistant" class="assistant">Go to chat</a>
+
+        <a *ngIf="auth.userLoggedIn" class="sign-up" (click)="logout()">
+            Log out
+        </a>
+    </div>
+</div>

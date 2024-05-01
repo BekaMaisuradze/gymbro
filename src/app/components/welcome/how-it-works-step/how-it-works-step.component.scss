@@ -1,0 +1,189 @@
+@import '../../../../styles.scss';
+
+@media (max-width: 768px) {
+  .step {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 0 0;
+    }
+
+    .central-section {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0 12px;
+      flex: 1;
+
+      .step-circle {
+        background-color: $primary-color;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+        color: $card-background-color;
+        display: flex;
+        flex-direction: column;
+        margin: 6px;
+
+        p {
+          text-align: center;
+        }
+
+        .step-label {
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 2px;
+          font-size: 12px;
+        }
+
+        .step-number {
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    .text-section {
+      justify-self: flex-start;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .explanation-title {
+        color: $text-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .explanation-text {
+        color: var(--gray-500, $x-light-text-color);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 6px;
+      }
+    }
+
+    .illustration-section {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .dot {
+      background-color: $x-light-primary-color;
+      height: 8px;
+      width: 8px;
+      border-radius: 4px;
+      margin: 2px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .step {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 0 0;
+    }
+
+    .central-section {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      padding: 0 70px;
+
+      .step-circle {
+        background-color: $primary-color;
+        width: 90px;
+        height: 90px;
+        border-radius: 45px;
+        align-items: center;
+        justify-content: center;
+        color: $card-background-color;
+        display: flex;
+        flex-direction: column;
+        margin: 6px;
+
+        p {
+          text-align: center;
+        }
+
+        .step-label {
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 4px;
+        }
+
+        .step-number {
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .text-section {
+      width: 469px;
+      min-width: 200px;
+      justify-self: flex-start;
+
+      .explanation-title {
+        color: $text-color;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 83.333% */
+      }
+
+      .explanation-text {
+        color: var(--gray-500, $x-light-text-color);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 24px;
+      }
+    }
+
+    .illustration-section {
+      width: 469px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .dot {
+      background-color: $x-light-primary-color;
+      height: 8px;
+      width: 8px;
+      border-radius: 4px;
+      margin: 2px;
+    }
+  }
+}

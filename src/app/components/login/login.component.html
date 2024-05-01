@@ -1,0 +1,26 @@
+<div class="auth-container">
+    <div class="title">
+        Log in to your account
+    </div>
+
+    <div class="form">
+        <div class="flex flex-column gap-2 input">
+            <label htmlFor="email">Email address</label>
+            <input pInputText type="email" id="email" aria-describedby="email-help" #email />
+        </div>
+        <div class="flex flex-column gap-2 input">
+            <label htmlFor="password">Password</label>
+            <input pInputText type="password" id="password" aria-describedby="password-help" #pass />
+        </div>
+
+        <a routerLink="/password-recovery">Forgot your password?</a>
+
+        <p-button label="Sign in" (click)="login(email.value, pass.value)"></p-button>
+        
+        <p>
+            <span style="color: #333333;">Don't have an account? </span>
+            <a routerLink="/sign-up">Sign Up</a>
+        </p>
+    </div>
+</div>
+

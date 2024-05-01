@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row clearfix">
+        <div class="card chat-app">
+            <div class="chat">
+
+                <div class="chat-header clearfix">
+                    <div class="row">
+                        <div>
+                            <a data-toggle="modal" data-target="#view_info">
+                                <img src="assets/logos/logo-l.png" alt="avatar">
+                            </a>
+                            <div class="chat-about">
+                                <h6 class="m-b-0">GYMPRO</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-history" #messages>
+                    <ul class="m-b-0">
+                        <li *ngFor="let message of chatData; let i = index" class="clearfix">
+                            <div *ngIf="i%2==0" class="message other-message float-right">{{message}}</div>
+                            <div *ngIf="i%2==1" class="message my-message">{{message}}</div>
+                        </li>
+                        <li *ngIf="loading" class="clearfix">
+                            <div class="message my-message">
+                                <p-progressSpinner styleClass="w-2rem h-2rem"></p-progressSpinner>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat-message clearfix">
+                    <div class="input-group mb-0">
+                        <div class="input-group-prepend">
+                            <button pButton [loading]="loading" type="button" icon="pi pi-send" (click)="generateText()"></button>
+                        </div>
+                        <textarea [disabled]="loading" class="form-control" placeholder="Enter text here..." [(ngModel)]="question" (keydown.enter)="generateText()"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

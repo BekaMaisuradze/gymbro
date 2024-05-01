@@ -1,0 +1,27 @@
+<div class="step" [style.flex-direction]="step.step_num % 2 === 1 ? 'row-reverse' : 'row'">
+  <div class="illustration-section" [style.justify-content]="step.step_num % 2 === 1 ? 'flex-start' : 'flex-end'">
+    <img width="200px" src="{{step.illustration_uri}}" />
+  </div>
+  <div class="central-section">
+    <div class="dot" [style.opacity]="step.type === 'first' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'first' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'first' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'first' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'first' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'first' ? 0 : 1"></div>
+    <div class="step-circle">
+      <p class="step-label">Step</p>
+      <p class="step-number">{{step.step_num}}</p>
+    </div>
+    <div class="dot" [style.opacity]="step.type === 'last' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'last' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'last' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'last' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'last' ? 0 : 1"></div>
+    <div class="dot" [style.opacity]="step.type === 'last' ? 0 : 1"></div>
+  </div>
+  <div class="text-section" [style.text-align]="step.step_num % 2 === 1 ? 'right' : 'left'">
+    <p class="explanation-title">{{step.title}}</p>
+    <p class="explanation-text">{{step.subtitle}}</p>
+  </div>
+</div>

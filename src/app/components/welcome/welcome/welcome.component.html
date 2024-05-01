@@ -1,0 +1,25 @@
+<div class="welcome-container">
+  <section class="home">
+    <div class="info">
+      <div>
+        <p class="title-top">Workout Assistant</p>
+        <p class="title-bottom">With Superpowers</p>
+      </div>
+      <p class="subtitle">
+        GYMPRO knows everything about gym and workout. Once he reads a book, he remembers every detail. Hundreds of training documents, tens of thousands of pages, millions of words.
+      </p>
+      <button (click)="onTryClick()">Try Now</button>
+    </div>
+    <div class="video-container">
+      <iframe id="ytplayer" type="text/html" width="720" height="405"
+        src="https://www.youtube.com/embed/3egOt2tzMVo?controls=0&autoplay=1&loop=1&modestbranding=1&mute=1&playlist=3egOt2tzMVo"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+  <section class="how-it-works">
+    <p class="section-title">How it Works</p>
+    <app-how-it-works-step [step]="steps[0]" />
+    <app-how-it-works-step [step]="steps[1]" />
+    <app-how-it-works-step [step]="steps[2]" />
+  </section>
+</div>
