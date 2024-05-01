@@ -10,7 +10,7 @@ export class ChatService {
 
   constructor() {
     this.openai = new OpenAI({
-      apiKey: 'sk-proj-FkcrIlLpB0ieXrUM4v64T3BlbkFJlljfD9MoZaFkEYEl2fGn',
+      apiKey: '',
       dangerouslyAllowBrowser: true
     });
   }
